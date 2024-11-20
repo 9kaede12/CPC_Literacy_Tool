@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>職業選択</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 職業カードの設定 */
+        .job {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 350px;
+            justify-content: space-evenly;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 画像サイズを統一して調整 */
+        .job img {
+            width: auto;
+            height: auto;
+            max-height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* 職業名のスタイル */
+        .job-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* ボタンの余白調整 */
+        .job button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            font-size: 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* ボタンのホバーエフェクト */
+        .job button:hover {
+            background-color: #45a049;
+        }
+
+        /* スマホ向け調整 */
+        @media (max-width: 768px) {
+            .job {
+                min-height: 300px;
+            }
+
+            .job img {
+                max-height: 120px;
+            }
+
+            .job-title {
+                font-size: 1rem;
+            }
+        }
+
+        /* 前の画面に戻るボタン */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 戻るボタンホバー */
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function confirmSelection(jobName, imgSrc) {
+            window.location.href = `confirm.html?job=${encodeURIComponent(jobName)}&img=${encodeURIComponent(imgSrc)}`;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body class="container my-5">
+    <!-- 前の画面に戻るボタン -->
+    <button class="back-button" onclick="goBack()">前の画面に戻る</button>
+
+    <h1 class="text-center mb-5">職業選択画面</h1>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/小学生.png" alt="小学生" class="card-img-top mx-auto d-block">
+                <p class="job-title">小学生</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('小学生', './jobsImages/小学生.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/中高生.png" alt="中高生" class="card-img-top mx-auto d-block">
+                <p class="job-title">中高生</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('中高生', './jobsImages/中高生.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/専門大学生.jpg" alt="専門大生" class="card-img-top mx-auto d-block">
+                <p class="job-title">専門大生</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('専門大生', './jobsImages/専門大生.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/社会人.jpg" alt="社会人" class="card-img-top mx-auto d-block">
+                <p class="job-title">会社員</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('社会人', './jobsImages/社会人.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/専業主婦・主夫.png" alt="専業主婦・主夫" class="card-img-top mx-auto d-block">
+                <p class="job-title">主婦・主夫</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('専業主婦・主夫', './jobsImages/専業主婦・主夫.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/配信者.png" alt="配信者" class="card-img-top mx-auto d-block">
+                <p class="job-title">配信者</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('配信者', './jobsImages/配信者.png')">選択</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card job">
+                <img src="./jobsImages/老後.png" alt="老後" class="card-img-top mx-auto d-block">
+                <p class="job-title">老後</p>
+                <button class="btn btn-success w-100" onclick="confirmSelection('老後', './jobsImages/老後.png')">選択</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
