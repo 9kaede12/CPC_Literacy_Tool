@@ -16,3 +16,19 @@ img {
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* 次の画面に進むボタン */
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* 進むボタンをホバーした時の色 */
+#next-button:hover {
+  background-color: #45a049; /* ホバー時の色 */
+  border-color: #45a049;
+}

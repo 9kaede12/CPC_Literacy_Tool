@@ -3,5 +3,5 @@ function confirmSelection(jobName, imgSrc) {
 }
 
 function goBack() {
-  window.history.back();
+  window.location.href = "index.html";
 }
