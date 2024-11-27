@@ -1,0 +1,85 @@
+/* setting_menu.css <- 設定画面のデザイン */
+
+.setting-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu-content {
+    background-color: var(--textbox-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    gap: 20px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.menu-button {
+    background-color: var(--accent1-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: var(--accent-color3);
+}
+
+.menu-button:active {
+    transform: translateY(2px);
+}
+
+/* 設定ボタンの位置 */
+.cards {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* 設定ボタン */
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    color: var(--setButton-color); /* 設定ボタンの文字カラー */
+    cursor: pointer;
+    transition: 400ms;
+}
+
+/* 設定ボタンのフォント */
+.cards .card p.tip {
+    font-size: 20px; /* 設定ボタンの文字サイズ */
+    font-weight: 700;
+}
+
+/* セーブ・ロードボタン */
+#save-load-system {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+}
