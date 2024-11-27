@@ -1,0 +1,18 @@
+body {
+  font-size: 1.25rem; /* 基本のフォントサイズを大きく */
+}
+
+h1 {
+  font-size: 2rem; /* タイトルのフォントサイズを大きく */
+}
+
+p {
+  font-size: 1.5rem; /* 職業名のフォントサイズを大きく */
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
