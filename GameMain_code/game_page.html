@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ノベルゲーム</title>
+
+  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/setting_menu.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <!-- 背景とキャラクターの表示エリア -->
+    <div id="background" class="game-layer"></div>
+    <div id="character" class="game-layer"></div>
+
+    <!-- 設定ボタン -->
+    <div class="cards">
+      <div id="setting-button" class="card">
+        <p class="tip">設定</p>
+      </div>
+    </div>
+
+    <!-- テキストボックス -->
+    <div id="text-box" class="text-box">
+      <p id="text"></p>
+    </div>
+
+    <!-- バックログボタン -->
+    <div id="backlog-button" class="backlog-button">
+      <p id="text">ログ</p>
+    </div>
+
+    <!-- オートモードボタン -->
+    <div id="auto-mode-button" class="auto-mode-button">
+      <p id="text">auto</p>
+    </div>
+
+    <!-- 選択肢の表示エリア -->
+    <nav id="choices" class="choices" style="display: none;">
+      <div id="choice1" class="card">
+        <img class="choice-icon" src="" alt="選択肢1のアイコン">
+        <div class="card__content">
+          <p class="card__title"></p>
+          <p class="card__description"></p>
+        </div>
+      </div>
+      <div id="choice2" class="card">
+        <img class="choice-icon" src="" alt="選択肢2のアイコン">
+        <div class="card__content">
+          <p class="card__title"></p>
+          <p class="card__description"></p>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 設定画面の表示エリア -->
+  <div id="setting-menu" class="setting-menu" style="display: none;">
+    <div class="menu-content">
+      <button id="resume-button" class="menu-button">ゲームに戻る</button>
+      <button id="result-button" class="menu-button">結果を表示</button>
+      <h2>セーブとロード</h2>
+      <div id="save-load-system">
+        <button id="save-slot-1" data-slot="0">セーブ1</button>
+        <button id="load-slot-1" data-slot="0">セーブ1</button>
+
+        <button id="save-slot-2" data-slot="1">セーブ2</button>
+        <button id="load-slot-2" data-slot="1">セーブ2</button>
+
+        <button id="save-slot-3" data-slot="2">セーブ3</button>
+        <button id="load-slot-3" data-slot="2">セーブ3</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScriptファイルの読み込み -->
+  <script src="js/texts.js"></script>
+  <script src="js/img.js"></script>
+  <script src="js/save-load-system.js"></script>
+  <script src="js/backlog.js"></script>
+  <script src="js/auto-mode.js"></script>
+  <script src="js/game.js"></script>
+</body>
+
+</html>

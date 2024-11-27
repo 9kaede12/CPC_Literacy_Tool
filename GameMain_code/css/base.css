@@ -1,0 +1,192 @@
+/* CSS共通の変数 */
+:root {
+
+  /* 色 */
+  --base-color: #e4e4e4;
+  --text-color: #ffffff;
+  --textbox-color: #000000;
+  --accent-color1: #000000;
+  --accent-color2: #ffffff;
+  --accent-color3: #808080;
+  --setButton-color: #ffffff;
+
+  /* 文字の大きさ */
+  --textSize-large: 20px;
+  --textSize-medium: 16px;
+  --textSize-small: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--base-color);
+}
+
+#game-container {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+#background,
+#character {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#text-box {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: var(--textbox-color);
+  /* <- テキストボックスの色 */
+  color: var(--text-color);
+  /* <- 文字の色 */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.choices {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* バックログのボタン */
+#backlog-button {
+  position: fixed;
+  top: 80px;
+  left: 10px;
+  background-color: var(--textbox-color);
+  color: var(--text-color);
+  padding: 0px 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backlog-button:hover {
+  background-color: var(--text-color);
+  color: var(--textbox-color);
+}
+
+.backlog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.backlog-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 影を付けて目立たせる */
+  font-size: var(--textSize-medium); /* テキストサイズを調整 */
+}
+
+.backlog-content h2 {
+  margin-bottom: 10px;
+}
+
+.backlog-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.backlog-content li {
+  display: block; /* ブロック要素として表示 */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* 各履歴を区切る線 */
+  color: #333; /* テキスト色 */
+  word-wrap: break-word; /* 長いテキストを折り返し */
+
+}
+
+.backlog-content button {
+  margin-top: 10px;
+}
+
+.backlog-return-button {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: var(--textSize-medium);
+  background-color: var(--textbox-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--base-color) 0.3 ease;
+}
+
+.backlog-return-button:hover {
+  background-color: var(--base-color);
+}
+
+.backlog-return-button:active {
+  background-color: var(--accent-color2);
+}
+
+/* オートモードのボタン */
+#auto-mode-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: var(--textbox-color);
+  color: var(--text-color);
+  padding: 0px 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#auto-mode-button:hover {
+  background-color: var(--text-color);
+  color: var(--textbox-color);
+}
+
+/* 一時停止中にクリックや入力を無効化するためのUIオーバーレイ */
+#pause-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+  /* 一時停止中のみ表示 */
+}
