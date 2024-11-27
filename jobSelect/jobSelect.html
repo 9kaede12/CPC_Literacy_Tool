@@ -4,74 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>職業選択</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSSの読み込み -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- カスタムCSSファイルの読み込み -->
     <link rel="stylesheet" href="./CSS/jobSelect.css">
-    <!-- Custom JavaScript -->
+    <!-- カスタムJavaScriptファイルの読み込み（deferでHTML読み込み後に実行） -->
     <script src="./JS/jobSelect.js" defer></script>
 </head>
 <body class="container my-5">
-    <!-- 前の画面に戻るボタン -->
+    <!-- 戻るボタン：前の画面に戻るためのボタン -->
     <div>
         <button class="back-button" onclick="goBack()">戻る</button>
     </div>
 
+    <!-- ページタイトル -->
     <h1 class="text-center mb-5">職業選択画面</h1>
 
+    <!-- 職業カードを格納する行 -->
     <div class="row g-4">
+        <!-- 各職業カード -->
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 小学生の画像 -->
                 <img src="./jobsImages/ElementarySchoolStudent.png" alt="小学生" class="card-img-top mx-auto d-block">
+                <!-- 小学生のタイトル -->
                 <p class="job-title">小学生</p>
+                <!-- 小学生選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('小学生', './jobsImages/ElementarySchoolStudent.png')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 中高生の画像 -->
                 <img src="./jobsImages/JuniorHighAndHighSchoolStudents.png" alt="中高生" class="card-img-top mx-auto d-block">
+                <!-- 中高生のタイトル -->
                 <p class="job-title">中高生</p>
+                <!-- 中高生選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('中高生', './jobsImages/JuniorHighAndHighSchoolStudents.png')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 専門大生の画像 -->
                 <img src="./jobsImages/VocationalUniversityStudent.png" alt="専門大生" class="card-img-top mx-auto d-block">
+                <!-- 専門大生のタイトル -->
                 <p class="job-title">専門大生</p>
+                <!-- 専門大生選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('専門大生', './jobsImages/VocationalUniversityStudent.png')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 社会人の画像 -->
                 <img src="./jobsImages/CompanyEmployee.jpg" alt="社会人" class="card-img-top mx-auto d-block">
+                <!-- 社会人のタイトル -->
                 <p class="job-title">会社員</p>
+                <!-- 社会人選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('社会人', './jobsImages/CompanyEmployee.jpg')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 主婦・主夫の画像 -->
                 <img src="./jobsImages/HousewifeOrHousehusband.png" alt="専業主婦・主夫" class="card-img-top mx-auto d-block">
+                <!-- 主婦・主夫のタイトル -->
                 <p class="job-title">主婦・主夫</p>
+                <!-- 主婦・主夫選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('専業主婦・主夫', './jobsImages/HousewifeOrHousehusband.png')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 配信者の画像 -->
                 <img src="./jobsImages/VideoContributor.png" alt="配信者" class="card-img-top mx-auto d-block">
+                <!-- 配信者のタイトル -->
                 <p class="job-title">配信者</p>
+                <!-- 配信者選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('配信者', './jobsImages/VideoContributor.png')">選択</button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card job">
+                <!-- 老後の画像 -->
                 <img src="./jobsImages/OldAge.png" alt="老後" class="card-img-top mx-auto d-block">
+                <!-- 老後のタイトル -->
                 <p class="job-title">老後</p>
+                <!-- 老後選択ボタン -->
                 <button class="btn btn-success w-100" onclick="confirmSelection('老後', './jobsImages/OldAge.png')">選択</button>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- BootstrapのJavaScriptを読み込む -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

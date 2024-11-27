@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- 文字コードとレスポンシブデザイン用の設定 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>確認画面</title>
-    <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap CSSの読み込み -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- カスタムCSSファイルの読み込み -->
     <link rel="stylesheet" href="./css/confirm.css">
-    <!-- Custom JavaScript -->
+    <!-- カスタムJavaScriptファイルの読み込み（deferでHTML読み込み後に実行） -->
     <script src="./JS/confirm.js" defer></script>
 </head>
 <body class="container text-center my-5">
-
+    <!-- ページタイトル -->
     <h1>選択を確認</h1>
+
+    <!-- 選択された職業名を表示する要素 -->
     <p id="job-name" class="fw-bold">職業</p>
+
+    <!-- 選択された職業の画像を表示する要素 -->
     <img id="job-image" src="#" alt="職業画像" class="mb-4">
+
+    <!-- 職業選択の確認メッセージ -->
     <p>この職業を選択しますか？</p>
 
+    <!-- はい・いいえボタン -->
     <div class="buttons">
+        <!-- 選択を確定するボタン -->
         <button class="btn btn-success me-2" onclick="confirmYes()">はい</button>
+        <!-- 前の画面に戻るボタン -->
         <button class="btn btn-danger" onclick="confirmNo()">いいえ</button>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- BootstrapのJavaScriptを読み込む -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
