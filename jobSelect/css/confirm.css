@@ -1,17 +1,24 @@
 body {
-  font-size: 2rem; /* 基本のフォントサイズを大きく */
+  font-size: 3rem; /* 基本のフォントサイズを大きく */
 }
 
 h1 {
-  font-size: 3rem; /* タイトルのフォントを大きく */
+  font-size: 4rem; /* タイトルのフォントを大きく */
 }
 
-p, button {
+p {
+  font-size: 3rem; /* ボタンと段落のフォントサイズ */
+}
+
+button {
   font-size: 1.8rem; /* ボタンと段落のフォントサイズ */
 }
 
 img {
-  max-width: 100%; /* 親要素の幅に収まるよう調整 */
-  height: auto;    /* アスペクト比を保持 */
-  border-radius: 10px; /* 角丸のデザインを維持 */
+  max-width: 300px; /* 画像の最大幅を300pxに制限 */
+  max-height: 300px; /* 画像の最大高さを300pxに制限 */
+  width: auto;       /* アスペクト比を保持して幅を自動調整 */
+  height: auto;      /* アスペクト比を保持して高さを自動調整 */
+  object-fit: contain; /* 画像全体を表示（余白が生じる場合あり） */
+  border-radius: 10px; /* 角丸デザインを維持 */
 }

@@ -11,11 +11,14 @@ p {
 }
 
 img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
+  max-width: 300px; /* 画像の最大幅を300pxに制限 */
+  max-height: 300px; /* 画像の最大高さを300pxに制限 */
+  width: auto;       /* アスペクト比を保持して幅を自動調整 */
+  height: auto;      /* アスペクト比を保持して高さを自動調整 */
+  object-fit: contain; /* 画像全体を表示（余白が生じる場合あり） */
+  border-radius: 10px; /* 角丸デザインを維持 */
 }
+
 
 /* 次の画面に進むボタン */
 #next-button {
