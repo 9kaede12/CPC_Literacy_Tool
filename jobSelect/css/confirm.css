@@ -1,22 +1,56 @@
+:root {
+  --button-font-size: clamp(1rem, 1.5vw, 1.8rem); /* ボタンのフォントサイズ */
+  --button-width: 150px; /* ボタンの幅 */
+  --button-height: 50px; /* ボタンの高さ */
+}
+
 body {
-  font-size: clamp(1.5rem, 5vw, 10rem); /* 画面サイズに応じて調整 */
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* 画面サイズに応じて調整 */
 }
 
 h1 {
-  font-size: clamp(3.3rem, 4vw, 10rem); /* 画面幅に応じてタイトルを拡大縮小 */
+  font-size: clamp(2rem, 4vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
 }
 
 h2 {
-  font-size: clamp(3.3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
+  font-size: clamp(3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
 }
 
 p {
-  font-size: clamp(1.7rem, 3vw, 10rem); /* 段落も動的に調整 */
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* 段落も動的に調整 */
 }
 
+/* 共通のボタンスタイル */
 button {
-  font-size: clamp(3rem, 5vw, 10rem); /* ボタンの文字サイズを調整 */
+  font-size: clamp(1rem, 1.5vw, 1.8rem); /* ボタンのフォントサイズ */
+  width: 150px; /* ボタンの幅 */
+  height: 50px; /* ボタンの高さ */
+  border-radius: 8px; /* 角丸 */
+  border: none; /* ボーダーを削除 */
+  cursor: pointer; /* ホバー時にポインター表示 */
+  transition: background-color 0.3s ease; /* 背景色変更のアニメーション */
 }
+
+/* はいボタンのスタイル */
+button:first-of-type {
+  background-color: #4CAF50; /* 緑色 */
+  color: #fff; /* 白い文字 */
+}
+
+button:first-of-type:hover {
+  background-color: #45a049; /* ホバー時の濃い緑色 */
+}
+
+/* いいえボタンのスタイル */
+button:last-of-type {
+  background-color: #dc3545; /* 赤色 */
+  color: #fff; /* 白い文字 */
+}
+
+button:last-of-type:hover {
+  background-color: #c82333; /* ホバー時の濃い赤色 */
+}
+
 
 img {
   max-width: 50%; /* 画像の最大幅を親要素の50%に設定 */
