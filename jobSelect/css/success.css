@@ -1,9 +1,20 @@
+:root {
+  --background-color: #CCFFFF; /* 背景色 */
+}
+
 body {
   font-size: 1.25rem; /* 基本のフォントサイズを大きく */
+  background-color: var(--background-color); /* 背景色を設定 */
+  margin: 0; /* ページ全体の余白を削除 */
+  padding: 0; /* ページ全体のパディングを削除 */
 }
 
 h1 {
-  font-size: 2rem; /* タイトルのフォントサイズを大きく */
+  font-size: clamp(2rem, 4vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
+}
+
+h2 {
+  font-size: clamp(3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
 }
 
 p {

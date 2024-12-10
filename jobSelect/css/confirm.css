@@ -2,10 +2,14 @@
   --button-font-size: clamp(1rem, 1.5vw, 1.8rem); /* ボタンのフォントサイズ */
   --button-width: 150px; /* ボタンの幅 */
   --button-height: 50px; /* ボタンの高さ */
+  --background-color: #CCFFFF; /* 背景色 */
 }
 
 body {
   font-size: clamp(1.5rem, 2.5vw, 3rem); /* 画面サイズに応じて調整 */
+  background-color: var(--background-color); /* 背景色を設定 */
+  margin: 0; /* ページ全体の余白を削除 */
+  padding: 0; /* ページ全体のパディングを削除 */
 }
 
 h1 {
@@ -22,9 +26,9 @@ p {
 
 /* 共通のボタンスタイル */
 button {
-  font-size: clamp(1rem, 1.5vw, 1.8rem); /* ボタンのフォントサイズ */
-  width: 150px; /* ボタンの幅 */
-  height: 50px; /* ボタンの高さ */
+  font-size: var(--button-font-size); /* ボタンのフォントサイズ */
+  width: var(--button-width); /* ボタンの幅 */
+  height: var(--button-height); /* ボタンの高さ */
   border-radius: 8px; /* 角丸 */
   border: none; /* ボーダーを削除 */
   cursor: pointer; /* ホバー時にポインター表示 */
@@ -50,7 +54,6 @@ button:last-of-type {
 button:last-of-type:hover {
   background-color: #c82333; /* ホバー時の濃い赤色 */
 }
-
 
 img {
   max-width: 50%; /* 画像の最大幅を親要素の50%に設定 */

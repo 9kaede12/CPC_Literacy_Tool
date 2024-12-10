@@ -1,3 +1,13 @@
+:root {
+  --background-color: #CCFFFF; /* 背景色 */
+}
+
+body {
+  background-color: var(--background-color); /* 背景色を設定 */
+  margin: 0; /* ページ全体の余白を削除 */
+  padding: 0; /* ページ全体のパディングを削除 */
+}
+
 /* 職業カードの設定 */
 .job {
   display: flex;
