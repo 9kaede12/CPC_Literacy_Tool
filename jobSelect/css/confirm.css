@@ -1,24 +1,28 @@
 body {
-  font-size: 3rem; /* 基本のフォントサイズを大きく */
+  font-size: clamp(1.5rem, 5vw, 10rem); /* 画面サイズに応じて調整 */
 }
 
 h1 {
-  font-size: 4rem; /* タイトルのフォントを大きく */
+  font-size: clamp(3.3rem, 4vw, 10rem); /* 画面幅に応じてタイトルを拡大縮小 */
+}
+
+h2 {
+  font-size: clamp(3.3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
 }
 
 p {
-  font-size: 3rem; /* ボタンと段落のフォントサイズ */
+  font-size: clamp(1.7rem, 3vw, 10rem); /* 段落も動的に調整 */
 }
 
 button {
-  font-size: 1.8rem; /* ボタンと段落のフォントサイズ */
+  font-size: clamp(3rem, 5vw, 10rem); /* ボタンの文字サイズを調整 */
 }
 
 img {
-  max-width: 300px; /* 画像の最大幅を300pxに制限 */
-  max-height: 300px; /* 画像の最大高さを300pxに制限 */
-  width: auto;       /* アスペクト比を保持して幅を自動調整 */
-  height: auto;      /* アスペクト比を保持して高さを自動調整 */
-  object-fit: contain; /* 画像全体を表示（余白が生じる場合あり） */
-  border-radius: 10px; /* 角丸デザインを維持 */
+  max-width: 50%; /* 画像の最大幅を親要素の50%に設定 */
+  height: auto;   /* 高さはアスペクト比を保持して自動調整 */
+  object-fit: contain; /* 画像全体を表示 */
+  border-radius: 10px; /* 角丸デザイン */
+  margin: auto;  /* 画像を中央揃え */
+  display: block; /* ブロック要素として配置 */
 }
