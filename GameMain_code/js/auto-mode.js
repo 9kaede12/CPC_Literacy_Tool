@@ -1,38 +1,34 @@
 // auto-mode.js <- オートモードの内部処理
 
-class AutoMode {
+export class AutoMode {
+    /**
+     * @param {boolean} isActive オートモードの初期状態
+     * @param {Function} nextSceneCallback 次のシーンに進むためのコールバック関数
+     */
     constructor(isActive, nextSceneCallback) {
-
-        // オートモードのon/off状態
         this.isActive = isActive;
-
-        // 次のシーンに進むためのコールバック関数
         this.nextSceneCallback = nextSceneCallback;
-
-        // 自動進行を管理するタイマーID
         this.timer = null;
-
-        // 次のシーンに進むまでの間隔(ms)
-        this.delay = 3000;
+        this.delay = 3000; // 次のシーンに進むまでの間隔（ミリ秒）
     }
 
+    /**
+     * オートモードを切り替える関数
+     */
     toggleAutoMode() {
-
-        // on/offを切り替える
         this.isActive = !this.isActive;
-
         console.log(`オートモード切り替え: ${this.isActive ? "ON" : "OFF"}`);
 
         if (this.isActive) {
-
-            // オートモードを開始
             this.startAutoMode();
         } else {
-            // オートモードを停止
             this.stopAutoMode();
         }
     }
 
+    /**
+     * オートモードを開始する関数
+     */
     startAutoMode() {
         if (this.timer) {
             console.warn("既存のタイマーをクリアします。");
@@ -40,7 +36,8 @@ class AutoMode {
         }
 
         if (!this.isActive) {
-            console.warn("オートモードは無効です。タイマーを設定しません。")
+            console.warn("オートモードは無効です。タイマーを設定しません。");
+            return;
         }
         console.log("オートモードを開始します。");
 
@@ -49,14 +46,15 @@ class AutoMode {
             console.log("オートモード: 次のシーンに進むコールバックを実行します。");
             this.nextSceneCallback();
             if (this.isActive) {
-
                 // シーン進行後もオートモードが有効なら再度タイマーを設定
                 this.startAutoMode();
             }
         }, this.delay);
     }
 
-    // タイマーを停止、タイマーIDをリセット
+    /**
+     * オートモードを停止する関数
+     */
     stopAutoMode() {
         if (!this.timer) {
             console.warn("オートモードは既に停止しています。");
@@ -66,8 +64,26 @@ class AutoMode {
 
         clearTimeout(this.timer);
         this.timer = null;
+    }
+
+    /**
+     * オートモードを一時停止する関数（選択肢表示時など）
+     */
+    pauseAutoMode() {
+        if (this.timer) {
+            clearTimeout(this.timer);
+            this.timer = null;
+            console.log("オートモードを一時停止しました。");
         }
     }
 
-// クラスをグローバルスコープに公開
-window.AutoMode = AutoMode;
+    /**
+     * オートモードを再開する関数（選択肢選択後など）
+     */
+    resumeAutoMode() {
+        if (this.isActive && !this.timer) {
+            console.log("オートモードを再開します。");
+            this.startAutoMode();
+        }
+    }
+}

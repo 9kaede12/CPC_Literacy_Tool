@@ -1,19 +1,21 @@
 // backlog.js <- バックログの内部処理
 
-class Backlog {
+export class Backlog {
+    /**
+     * @param {Object} gameState ゲームの状態オブジェクト
+     */
     constructor(gameState) {
         this.gameState = gameState;
-
-        // バックログ画面を非表示
         this.isOpen = false;
-
-        // 直前のシーンIDを追跡
-        this.lastSceneId = null;
+        this.lastEntry = null;
     }
 
+    /**
+     * バックログを初期化する関数
+     */
     initialize() {
         // ゲーム開始時にバックログ画面を生成して非表示に設定
-        console.log("バックログを初期化中...")
+        console.log("バックログを初期化中...");
         this.renderBacklogOverlay();
         const overlay = document.getElementById('backlog-overlay');
         if (overlay) {
@@ -24,6 +26,9 @@ class Backlog {
         }
     }
 
+    /**
+     * バックログをトグルする関数
+     */
     toggleBacklog() {
         const overlay = document.getElementById('backlog-overlay');
 
@@ -51,12 +56,14 @@ class Backlog {
         }
     }
 
-    // 履歴画面の生成
+    /**
+     * 履歴画面の生成
+     */
     renderBacklogOverlay() {
         let overlay = document.getElementById('backlog-overlay');
         if (!overlay) {
             // HTMLにオーバーレイ要素を生成
-            const overlay = document.createElement('div');
+            overlay = document.createElement('div');
             overlay.id = 'backlog-overlay';
             overlay.className = 'backlog-overlay';
 
@@ -82,6 +89,9 @@ class Backlog {
         this.updateBacklog();
     }
 
+    /**
+     * バックログを更新する関数
+     */
     updateBacklog() {
         const ul = document.getElementById('backlog-list');
         if (!ul) {
@@ -94,29 +104,30 @@ class Backlog {
         this.gameState.history.forEach(entry => {
             console.log("履歴項目を追加:", entry); // デバッグ用
             const li = document.createElement('li');
-            li.textContent =`${entry.scene}: ${entry.text}`;
+            li.textContent = `${entry.speaker}: ${entry.text}`;
             ul.appendChild(li);
         });
     }
 
-    // バックログの追加
-    addEntry(sceneId, text) {
-        console.log("履歴に追加しようとしているデータ:", { sceneId, text });
+    /**
+     * バックログにエントリを追加する関数
+     * @param {string} speaker 話者の名前
+     * @param {string} text シーンのテキスト
+     */
+    addEntry(speaker, text) {
+        console.log("履歴に追加しようとしているデータ:", { speaker, text });
 
-        // 同じシーンが再表示された場合はスキップ
-        if (this.lastSceneId === sceneId) {
-            console.log(`シーンは再表示されたため、バックログに追加しません: ${sceneId}`);
+        // 同じエントリが連続して追加されないようにスキップ
+        if (this.lastEntry && this.lastEntry.speaker === speaker && this.lastEntry.text === text) {
+            console.log(`同一のエントリが連続しているため、バックログに追加しません: ${speaker}: ${text}`);
             return;
         }
 
-        this.gameState.history.push({ scene: sceneId, text });
-        // シーンIDを記録
-        this.lastSceneId = sceneId;
+        this.gameState.history.push({ speaker, text });
+        this.lastEntry = { speaker, text };
         console.log("バックログに追加されました。現在の履歴:", this.gameState.history);
 
         // 履歴を更新
         this.updateBacklog();
     }
 }
-
-window.Backlog = Backlog;

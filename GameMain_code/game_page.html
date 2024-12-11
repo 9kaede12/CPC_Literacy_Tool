@@ -27,17 +27,18 @@
 
     <!-- テキストボックス -->
     <div id="text-box" class="text-box">
+      <p id="speaker-name"></p> <!-- 話者名を表示する要素 -->
       <p id="text"></p>
     </div>
 
     <!-- バックログボタン -->
     <div id="backlog-button" class="backlog-button">
-      <p id="text">ログ</p>
+      <p>ログ</p>
     </div>
 
     <!-- オートモードボタン -->
     <div id="auto-mode-button" class="auto-mode-button">
-      <p id="text">auto</p>
+      <p>Auto</p>
     </div>
 
     <!-- 選択肢の表示エリア -->
@@ -67,24 +68,19 @@
       <h2>セーブとロード</h2>
       <div id="save-load-system">
         <button id="save-slot-1" data-slot="0">セーブ1</button>
-        <button id="load-slot-1" data-slot="0">セーブ1</button>
+        <button id="load-slot-1" data-slot="0">ロード1</button>
 
         <button id="save-slot-2" data-slot="1">セーブ2</button>
-        <button id="load-slot-2" data-slot="1">セーブ2</button>
+        <button id="load-slot-2" data-slot="1">ロード2</button>
 
         <button id="save-slot-3" data-slot="2">セーブ3</button>
-        <button id="load-slot-3" data-slot="2">セーブ3</button>
+        <button id="load-slot-3" data-slot="2">ロード3</button>
       </div>
     </div>
   </div>
 
   <!-- JavaScriptファイルの読み込み -->
-  <script src="js/texts.js"></script>
-  <script src="js/img.js"></script>
-  <script src="js/save-load-system.js"></script>
-  <script src="js/backlog.js"></script>
-  <script src="js/auto-mode.js"></script>
-  <script src="js/game.js"></script>
+  <script type="module" src="js/game.js"></script>
 </body>
 
 </html>
