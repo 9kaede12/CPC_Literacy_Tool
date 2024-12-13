@@ -1,3 +1,4 @@
+/* base.css */
 /* CSS共通の変数 */
 :root {
 
@@ -55,7 +56,22 @@ body {
   /* <- 文字の色 */
   padding: 10px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: var(--textSize-large);
+  height: 150px; /* 高さを固定 */
+  overflow: hidden; /* オーバーフローを隠す */
+  display: flex;
+  flex-direction: column;
+}
+
+#speaker-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#text {
+  flex: 1;
+  overflow-y: auto; /* テキストがオーバーフローした場合にスクロール */
+  white-space: pre-wrap; /* 改行を反映 */
 }
 
 .choices {
@@ -75,10 +91,11 @@ body {
   left: 10px;
   background-color: var(--textbox-color);
   color: var(--text-color);
-  padding: 0px 10px;
+  padding: 5px 10px;
   border: 1px solid var(--text-color);
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 #backlog-button:hover {
@@ -127,7 +144,6 @@ body {
   border-bottom: 1px solid #ddd; /* 各履歴を区切る線 */
   color: #333; /* テキスト色 */
   word-wrap: break-word; /* 長いテキストを折り返し */
-
 }
 
 .backlog-content button {
@@ -149,7 +165,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: var(--base-color) 0.3 ease;
+  transition: var(--base-color) 0.3s ease;
 }
 
 .backlog-return-button:hover {
@@ -167,10 +183,11 @@ body {
   left: 10px;
   background-color: var(--textbox-color);
   color: var(--text-color);
-  padding: 0px 10px;
+  padding: 5px 10px;
   border: 1px solid var(--text-color);
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 #auto-mode-button:hover {

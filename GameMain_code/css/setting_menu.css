@@ -24,7 +24,7 @@
 }
 
 .menu-button {
-    background-color: var(--accent1-color);
+    background-color: var(--accent-color1);
     color: var(--text-color);
     padding: 10px 20px;
     border: none;
@@ -73,13 +73,24 @@
 
 /* セーブ・ロードボタン */
 #save-load-system {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 1001;
+    display: block; /* セーブ・ロードシステムを表示 */
+    position: relative;
+    margin-top: 20px;
+}
+
+#save-load-system button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: var(--textSize-medium);
+    cursor: pointer;
+    border: 1px solid var(--accent-color3);
+    border-radius: 5px;
+    background-color: var(--accent-color1);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#save-load-system button:hover {
+    background-color: var(--accent-color3);
+    color: var(--textbox-color);
 }
