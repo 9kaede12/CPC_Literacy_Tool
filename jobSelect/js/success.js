@@ -13,15 +13,26 @@ window.onload = function () {
   // URLパラメータから画像のパスを取得
   const imgSrc = getQueryParam('img');
   // 職業名をHTML内の指定された要素に表示
-  document.getElementById('job-name').textContent = jobName;
+  document.getElementById('job-name').textContent = jobName || '職業名が指定されていません';
   // 職業画像をHTML内の指定された要素に表示
-  document.getElementById('job-image').src = imgSrc;
+  document.getElementById('job-image').src = imgSrc || 'default-image.jpg'; // デフォルト画像を設定
 };
 
 // 次の画面に進むボタンのクリックイベントを設定
 document.getElementById('next-button').addEventListener('click', () => {
-  // 次の画面のURLを指定
-  const nextPageURL = './next-page.html';
+  // 現在のURLを解析して1つ上の階層を取得
+  const currentPath = window.location.pathname;
+  const parentPath = currentPath.substring(0, currentPath.lastIndexOf('/jobSelect/'));
+
+  // 現在のプロトコルとホストを含めたベースURLを作成
+  const baseURL = `${window.location.origin}${parentPath}/`;
+
+  // 次の画面の相対パス
+  const nextPageRelativePath = 'GameMain_code/game_page.html';
+
+  // 親階層を基に新しいURLを生成
+  const nextPageURL = new URL(nextPageRelativePath, baseURL);
+
   // 指定されたURLに遷移する
-  window.location.href = nextPageURL;
+  window.location.href = nextPageURL.href;
 });
