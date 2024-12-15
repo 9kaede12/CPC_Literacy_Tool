@@ -1,5 +1,4 @@
 // texts.js -> ゲーム内のテキストと選択肢のデータを管理するJsファイル
-
 export const texts = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -108,4 +107,88 @@ export const texts = {
     }
 };
 
-// 他のシーンの追加はここから ↓
+
+//小学生
+export const texts = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "ー授業中ー",
+        speaker: "アヤ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "ﾃｨﾝﾄﾝ♪",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "あ、だれかからメッセージが届いた",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    scene4: {
+        text: "授業中だどうしよう",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene5"
+    },
+    // シーン5: 選択肢が登場するシーン
+    scene5: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "見る",
+                description: "ー休み時間ー",
+                iconId: "icon1",
+                nextScene: "scene9"
+            },
+            {
+                title: "見ない",
+                description: "先生に怒られた！！",
+                iconId: "icon2",
+                nextScene: "scene10"
+            }
+        ]
+    },
+    // シーン9: 応募しない選択をした場合のシーン
+    scene9: {
+        text: "B君からだった！今度公園でゲームをすることになった",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // シーン10: 応募する選択をした場合のシーン
+    scene10: {
+        text: "親に連絡が行き、１週間スマホ禁止になった",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
