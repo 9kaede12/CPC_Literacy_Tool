@@ -618,4 +618,284 @@ export const utexts3 = {
         fontId: "font1"
     }
 };
-
+export const ctexts1 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "ー仕事中ー",
+        speaker: "ナレーター",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "「Aさんちょっといい？」",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "「はい！」",
+        speaker: "Aさん",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    scene4: {
+        text: "パソコンをそのまま放置だと危ないし...",
+        speaker: "Aさん",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene5"
+    },
+    // シーン5: 選択肢が登場するシーン
+    scene5: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "Aさん",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "[Win]キーと[L]キーを同時押しして席を外す",
+                description: "",
+                iconId: "icon1",
+                nextScene: "sceneEnd"
+            },
+            {
+                title: "[Win]キーと[.]キーを同時押しして席を外す",
+                description: "",
+                iconId: "icon2",
+                nextScene: "sceneEnd"
+            }
+        ]
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
+export const ctexts2 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "来週の会社説明イベントの資料を送らなきゃだった！",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "学生全員に送りたいけど、他の学生のメールアドレスは見せたくないな...",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "あれ、宛先はCc:とBcc:どっちに追加すればいいんだっけ？",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    // シーン5: 選択肢が登場するシーン
+    scene4: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "参加者の宛先を Cc:に追加した",
+                description: "",
+                iconId: "icon1",
+                nextScene: "scene9"
+            },
+            {
+                title: "参加者の宛先を Bcc:に追加した",
+                description: "",
+                iconId: "icon2",
+                nextScene: "scene10"
+            }
+        ]
+    },
+    // シーン9: 応募しない選択をした場合のシーン
+    scene9: {
+        text: "まずい！宛先のアドレスが全員に公開されてしまった！",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // シーン10: 応募する選択をした場合のシーン
+    scene10: {
+        text: "よし！問題なく送れているな",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+     }
+};
+//会社員
+export const ctexts3 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "やべぇええ",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "仕事がおわらねぇぇえ",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "でも残業はしたくないなぁ～",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    scene4: {
+        text: "データを家に持って帰って続きをやろうかな～",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene5"
+    },
+    // シーン5: 選択肢が登場するシーン
+    scene5: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "USBにデータをいれ、家に持ち帰ってやる",
+                description: "家に帰る途中にUSBメモリを落として情報漏洩をしてしまった！！",
+                iconId: "icon1",
+                nextScene: "scene9"
+            },
+            {
+                title: "上司に話して残業する",
+                description: "T課長にめちゃんこ怒られた！！",
+                iconId: "icon2",
+                nextScene: "scene10"
+            }
+        ]
+    },
+    // シーン9: 応募しない選択をした場合のシーン
+    scene9: {
+        text: "会社で安全に仕事をすることができた！！",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // シーン10: 応募する選択をした場合のシーン
+    scene10: {
+        text: "T課長に怒られずに済んだぜ！！",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
+export const wtexts1 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "今回の料理は、とっても良いものができたわね！！",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "そうだ！！",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "SNSに写真を投稿してみんなに見てもらおうかしら！！",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    // シーン4: 選択肢が登場するシーン
+    scene4: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "スマートフォンで撮影し、フィルター加工してから投稿した",
+                description: "",
+                iconId: "icon1",
+                nextScene: "sceneEnd"
+            },
+            {
+                title: "フィルムカメラで撮影し、PCで編集してから投稿した",
+                description: "",
+                iconId: "icon2",
+                nextScene: "sceneEnd"
+            }
+        ]
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
