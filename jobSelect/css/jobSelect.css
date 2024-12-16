@@ -8,6 +8,10 @@ body {
   padding: 0; /* ページ全体のパディングを削除 */
 }
 
+h1 {
+  font-size: clamp(2rem, 3vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
+}
+
 /* 職業カードの設定 */
 .job {
   display: flex;
@@ -15,6 +19,7 @@ body {
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
+  background-color: #CCFFFF;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-height: 350px;
