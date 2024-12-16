@@ -192,6 +192,7 @@ export const etexts1 = {
         fontId: "font1"
     }
 };
+//小学生
 export const etexts2 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -334,6 +335,7 @@ export const jhtexts1 = {
         fontId: "font1"
     }
 };
+//中高生
 export const jhtexts2 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -460,6 +462,7 @@ export const utexts1 = {
         fontId: "font1"
     }
 };
+//専門大生
 export const utexts2 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -543,6 +546,7 @@ export const utexts2 = {
         fontId: "font1"
     }
 };
+//専門大生
 export const utexts3 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -618,6 +622,7 @@ export const utexts3 = {
         fontId: "font1"
     }
 };
+//会社員
 export const ctexts1 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -683,6 +688,7 @@ export const ctexts1 = {
         fontId: "font1"
     }
 };
+//会社員
 export const ctexts2 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -842,6 +848,7 @@ export const ctexts3 = {
         fontId: "font1"
     }
 };
+//主婦・主夫
 export const wtexts1 = {
     // シーン1: キャラクター同士の会話
     scene1: {
@@ -889,6 +896,156 @@ export const wtexts1 = {
                 nextScene: "sceneEnd"
             }
         ]
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
+//配信者
+export const stexts1 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "配信で使えるいい音楽、ないかな～？",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "あ、この曲いいじゃん！！",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "いい曲見つけたけどフリーBGMじゃないな～",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    // シーン4: 選択肢が登場するシーン
+    scene4: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "レコード会社に問い合わせてみよう",
+                description: "",
+                iconId: "icon1",
+                nextScene: "sceneEnd"
+            },
+            {
+                title: "どうせバレないから使っちゃえ！",
+                description: "",
+                iconId: "icon2",
+                nextScene: "sceneEnd"
+            }
+        ]
+    },
+    // 終了シーン
+    sceneEnd: {
+        text: "ゲームオーバー。ご利用ありがとうございました！",
+        speaker: "システム",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1"
+    }
+};
+//老後
+export const otexts1 = {
+    // シーン1: キャラクター同士の会話
+    scene1: {
+        text: "「あ、ねぇおじいちゃん、実は、、」",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene2"
+    },
+    scene2: {
+        text: "「なんだって？！すぐに50万必要じゃと？！」",
+        speaker: "じいちゃん",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene3"
+    },
+    scene3: {
+        text: "「じゃあおじいちゃんよろしくね～」",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene4"
+    },
+    scene4: {
+        text: "電話を切る",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene5"
+    },
+    scene5: {
+        text: "ずいぶん急に大金が必要なんじゃな～",
+        speaker: "タロウ",
+        characterId: "character1",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "scene6"
+    },
+    // シーン5: 選択肢が登場するシーン
+    scene6: {
+        text: "あなたはどちらを選びますか？",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        choices: [
+            {
+                title: "一度孫に携帯で電話してみようかのう",
+                description: "",
+                iconId: "icon1",
+                nextScene: "scene9"
+            },
+            {
+                title: "孫のピンチじゃ！銀行に行かねば！",
+                description: "",
+                iconId: "icon2",
+                nextScene: "scene10"
+            }
+        ]
+    },
+    // シーン9: 応募しない選択をした場合のシーン
+    scene9: {
+        text: "孫に「そんな電話してないよ」と言われた\n詐欺だとわかった",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
+    },
+    // シーン10: 応募する選択をした場合のシーン
+    scene10: {
+        text: "振り込んでしまった、お金が返ってこない...\n詐欺にあってしまった",
+        speaker: "タロウ",
+        characterId: "character7",
+        backgroundId: "background1",
+        fontId: "font1",
+        nextScene: "sceneEnd"
     },
     // 終了シーン
     sceneEnd: {
