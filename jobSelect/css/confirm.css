@@ -2,7 +2,18 @@
   --button-font-size: clamp(1rem, 1.5vw, 1.8rem); /* ボタンのフォントサイズ */
   --button-width: 150px; /* ボタンの幅 */
   --button-height: 50px; /* ボタンの高さ */
-  --background-color: #CCFFFF; /* 背景色 */
+  --background-color: #FFEFCC; /* 背景色 */
+}
+
+@font-face {
+	font-family: "marufont";
+	src: url("../../案２/851tegaki_zatsu_normal_0883.ttf") format("truetype");
+}
+
+@keyframes ripple {
+	0% {box-shadow: 0 0 0 0 #eb7034;}
+	70% {box-shadow: 0 0 0 10px rgb(27 133 251 / 0%);}
+	100% {box-shadow: 0 0 0 30px rgb(27 133 251 / 0%);}
 }
 
 body {
@@ -14,14 +25,17 @@ body {
 
 h1 {
   font-size: clamp(2rem, 4vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
+  font-family: "marufont", sans-serif;
 }
 
 h2 {
   font-size: clamp(3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
+  font-family: "marufont", sans-serif;
 }
 
 p {
   font-size: clamp(1.5rem, 2.5vw, 3rem); /* 段落も動的に調整 */
+  font-family: "marufont", sans-serif;
 }
 
 /* 共通のボタンスタイル */
@@ -37,26 +51,30 @@ button {
 
 /* はいボタンのスタイル */
 button:first-of-type {
-  background-color: #4CAF50; /* 緑色 */
+  background-color: #eb7034; /* 緑色 */
   color: #fff; /* 白い文字 */
+  font-family: "marufont", sans-serif;
 }
 
 button:first-of-type:hover {
-  background-color: #45a049; /* ホバー時の濃い緑色 */
+  background-color: #eb7034; /* ホバー時の濃い緑色 */
+  animation: ripple 1.5s infinite;
 }
 
 /* いいえボタンのスタイル */
 button:last-of-type {
   background-color: #dc3545; /* 赤色 */
   color: #fff; /* 白い文字 */
+  font-family: "marufont", sans-serif;
 }
 
 button:last-of-type:hover {
   background-color: #c82333; /* ホバー時の濃い赤色 */
+  animation: ripple 1.5s infinite;
 }
 
 img {
-  max-width: 50%; /* 画像の最大幅を親要素の50%に設定 */
+  max-width: 20%; /* 画像の最大幅を親要素の50%に設定 */
   height: auto;   /* 高さはアスペクト比を保持して自動調整 */
   object-fit: contain; /* 画像全体を表示 */
   border-radius: 10px; /* 角丸デザイン */

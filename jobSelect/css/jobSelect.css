@@ -1,5 +1,10 @@
 :root {
-  --background-color: #CCFFFF; /* 背景色 */
+  --background-color: #FFEFCC; /* 背景色 */
+}
+
+@font-face {
+	font-family: "marufont";
+	src: url("../../案２/851tegaki_zatsu_normal_0883.ttf") format("truetype");
 }
 
 body {
@@ -10,6 +15,7 @@ body {
 
 h1 {
   font-size: clamp(2rem, 3vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
+  font-family: "marufont", sans-serif;
 }
 
 /* 職業カードの設定 */
@@ -19,7 +25,7 @@ h1 {
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: #CCFFFF;
+  background-color: #FFEFCC;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-height: 350px;
@@ -43,22 +49,31 @@ h1 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 20px;
+  font-family: "marufont", sans-serif;
 }
 
 /* ボタンの余白調整 */
 .job button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #eb7034;
   font-size: 1.5rem;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "marufont", sans-serif;
 }
 
 /* ボタンのホバーエフェクト */
 .job button:hover {
-  background-color: #45a049;
+  background-color: #eb7034;
+  animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+	0% {box-shadow: 0 0 0 0 #eb7034;}
+	70% {box-shadow: 0 0 0 10px rgb(27 133 251 / 0%);}
+	100% {box-shadow: 0 0 0 30px rgb(27 133 251 / 0%);}
 }
 
 /* スマホ向け調整 */
@@ -83,15 +98,17 @@ h1 {
   left: 20px;
   z-index: 1000;
   padding: 10px 15px;
-  background-color: #4CAF50;
+  background-color: #eb7034;
   color: white;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "marufont", sans-serif;
 }
 
 /* 戻るボタンホバー */
 .back-button:hover {
-  background-color: #45a049;
+  background-color: #eb7034;
+  animation: ripple 1.5s infinite;
 }

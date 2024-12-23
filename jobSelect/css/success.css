@@ -1,5 +1,16 @@
 :root {
-  --background-color: #CCFFFF; /* 背景色 */
+  --background-color: #FFEFCC; /* 背景色 */
+}
+
+@font-face {
+	font-family: "marufont";
+	src: url("../../案２/851tegaki_zatsu_normal_0883.ttf") format("truetype");
+}
+
+@keyframes ripple {
+	0% {box-shadow: 0 0 0 0 #eb7034;}
+	70% {box-shadow: 0 0 0 10px rgb(27 133 251 / 0%);}
+	100% {box-shadow: 0 0 0 30px rgb(27 133 251 / 0%);}
 }
 
 body {
@@ -11,23 +22,26 @@ body {
 
 h1 {
   font-size: clamp(2rem, 4vw, 4rem); /* 画面幅に応じてタイトルを拡大縮小 */
+  font-family: "marufont", sans-serif;
 }
 
 h2 {
   font-size: clamp(3rem, 4vw, 10rem); /* 画面幅に応じて職業名を拡大縮小 */
+  font-family: "marufont", sans-serif;
 }
 
 p {
   font-size: 1.5rem; /* 職業名のフォントサイズを大きく */
+  font-family: "marufont", sans-serif;
 }
 
 img {
-  max-width: 300px; /* 画像の最大幅を300pxに制限 */
-  max-height: 300px; /* 画像の最大高さを300pxに制限 */
-  width: auto;       /* アスペクト比を保持して幅を自動調整 */
-  height: auto;      /* アスペクト比を保持して高さを自動調整 */
-  object-fit: contain; /* 画像全体を表示（余白が生じる場合あり） */
-  border-radius: 10px; /* 角丸デザインを維持 */
+  max-width: 20%; /* 画像の最大幅を親要素の50%に設定 */
+  height: auto;   /* 高さはアスペクト比を保持して自動調整 */
+  object-fit: contain; /* 画像全体を表示 */
+  border-radius: 10px; /* 角丸デザイン */
+  margin: auto;  /* 画像を中央揃え */
+  display: block; /* ブロック要素として配置 */
 }
 
 
@@ -37,12 +51,14 @@ img {
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 5px;
-  background-color: #4CAF50;
-  border-color: #4CAF50;
+  background-color: #eb7034;
+  border-color: #eb7034;
+  font-family: "marufont", sans-serif;
 }
 
 /* 進むボタンをホバーした時の色 */
 #next-button:hover {
-  background-color: #45a049; /* ホバー時の色 */
-  border-color: #45a049;
+  background-color: #eb7034; /* ホバー時の色 */
+  border-color: #eb7034;
+  animation: ripple 1.5s infinite;
 }

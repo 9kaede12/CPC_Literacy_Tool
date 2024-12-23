@@ -6,6 +6,6 @@ function confirmSelection(jobName, imgSrc) {
 
 // 戻るボタンが押されたときに実行される処理
 function goBack() {
-  // ホーム画面（index.html）に遷移する
-  window.location.href = "index.html";
+  // 前のページに戻る（ブラウザの履歴を利用）
+  window.history.back();
 }
