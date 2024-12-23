@@ -20,19 +20,21 @@ window.onload = function () {
 
 // 次の画面に進むボタンのクリックイベントを設定
 document.getElementById('next-button').addEventListener('click', () => {
-  // 現在のURLを解析して1つ上の階層を取得
-  const currentPath = window.location.pathname;
-  const parentPath = currentPath.substring(0, currentPath.lastIndexOf('/jobSelect/'));
+  // // 現在のURLを解析して1つ上の階層を取得
+  // const currentPath = window.location.pathname;
+  // const parentPath = currentPath.substring(0, currentPath.lastIndexOf('/jobSelect/'));
 
-  // 現在のプロトコルとホストを含めたベースURLを作成
-  const baseURL = `${window.location.origin}${parentPath}/`;
+  // // 現在のプロトコルとホストを含めたベースURLを作成
+  // const baseURL = `${window.location.origin}${parentPath}/`;
 
-  // 次の画面の相対パス
-  const nextPageRelativePath = 'GameMain_code/game_page.html';
+  // // 次の画面の相対パス
+  // const nextPageRelativePath = 'GameMain_code/game_page.html';
 
-  // 親階層を基に新しいURLを生成
-  const nextPageURL = new URL(nextPageRelativePath, baseURL);
+  // // 親階層を基に新しいURLを生成
+  // const nextPageURL = new URL(nextPageRelativePath, baseURL);
 
-  // 指定されたURLに遷移する
-  window.location.href = nextPageURL.href;
+  // // 指定されたURLに遷移する
+  // window.location.href = nextPageURL.href;
+
+  window.location.href = "../GameMain_code/game_page.html";
 });
