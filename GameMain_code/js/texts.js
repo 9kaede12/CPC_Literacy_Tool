@@ -69,13 +69,15 @@ export const texts = {
                 title: "応募しない",
                 description: "最近、ニュースとかで闇バイトで捕まっている人もいるし、\n闇バイトだったら怖いから、応募はやめとこー！",
                 iconId: "icon1",
-                nextScene: "scene9"
+                nextScene: "scene9",
+                isCorrect: true
             },
             {
                 title: "とりあえず応募する",
                 description: "今、どうしてもほしいブランドバックがあるけどお金がないから、ちょうどよかったー！\n応募しちゃおー！！",
                 iconId: "icon2",
-                nextScene: "scene10"
+                nextScene: "scene10",
+                isCorrect: false
             }
         ]
     },
@@ -155,13 +157,15 @@ export const etextsA = {
                 title: "授業中だし、休み時間に見よう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene9"
+                nextScene: "scene9",
+                isCorrect: true
             },
             {
                 title: "わからないように確認しちゃう",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene10"
+                nextScene: "scene10",
+                isCorrect: false
             }
         ]
     },
@@ -238,13 +242,15 @@ export const etextsB = {
                 title: "お母さんに相談してみよう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: true
             },
             {
                 title: "どうせばれないし勝手に登録しちゃえ",
                 description: "",
                 iconId: "icon2",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: false
             }
         ]
     },
@@ -304,13 +310,15 @@ export const etextsC = {
                 title: "自分で調べてまとめる",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene9"
+                nextScene: "scene9",
+                isCorrect: true
             },
             {
                 title: "そのまま写す",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene10"
+                nextScene: "scene10",
+                isCorrect: false
             }
         ]
     },
@@ -380,13 +388,15 @@ export const jhtextsA = {
                 title: "投稿者に削除を依頼する",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scenEend"
+                nextScene: "sceneEnd",
+                isCorrect: true
             },
             {
                 title: "友人を問い詰める",
                 description: "",
                 iconId: "icon2",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: false
             }
         ]
     },
@@ -439,13 +449,15 @@ export const jhtextsC = {
                 title: "書いた人に許可を取ってから設定する",
                 description: "書いた人に許可を取ってから設定しよう",
                 iconId: "icon1",
-                nextScene: "scenEend"
+                nextScene: "sceneEnd",
+                isCorrect: true
             },
             {
                 title: "自分で使うだけだし、勝手に設定しちゃう",
                 description: "自分で使うだけだし、勝手に設定しちゃおう。私的使用の範囲内だよね",
                 iconId: "icon2",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: false
             }
         ]
     },
@@ -505,13 +517,15 @@ export const jhtextsD = {
                 title: "嘘をついて契約したので、取り消しはできない",
                 description: "",
                 iconId: "icon1",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: true
             },
             {
                 title: "未成年なので、法定代理人が取り消しできる",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene10"
+                nextScene: "scene10",
+                isCorrect: false
             }
         ]
     },
@@ -565,13 +579,15 @@ export const utextsA = {
                 title: "仕事内容わかんないし怖いから、他を探そう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene4"
+                nextScene: "scene4",
+                isCorrect: true
             },
             {
                 title: "まあ時給高いし応募してみよ",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene5"
+                nextScene: "scene5",
+                isCorrect: false
             }
         ]
     },
@@ -655,13 +671,15 @@ export const utextsB = {
                 title: "詐欺の可能性があるので断る",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene5"
+                nextScene: "scene5",
+                isCorrect: true
             },
             {
                 title: "親密な関係なので了承する",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: false
             }
         ]
     },
@@ -745,13 +763,15 @@ export const utextsC = {
                 title: "知らない人だし許可はやめておこう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene9"
+                nextScene: "scene9",
+                isCorrect: true
             },
             {
                 title: "Cちゃんの知り合いじゃん！許可しちゃえ",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene10"
+                nextScene: "scene10",
+                isCorrect: false
             }
         ]
     },
@@ -845,13 +865,15 @@ export const ctextsA = {
                 title: "[Win]キーと[L]キーを同時押しして席を外す",
                 description: "",
                 iconId: "icon1",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: true
             },
             {
                 title: "[Win]キーと[.]キーを同時押しして席を外す",
                 description: "",
                 iconId: "icon2",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: false
             }
         ]
     },
@@ -899,16 +921,18 @@ export const ctextsB = {
         fontId: "font1",
         choices: [
             {
-                title: "参加者の宛先を Cc:に追加した",
-                description: "",
-                iconId: "icon1",
-                nextScene: "scene5"
-            },
-            {
                 title: "参加者の宛先を Bcc:に追加した",
                 description: "",
+                iconId: "icon1",
+                nextScene: "scene5",
+                isCorrect: true
+            },
+            {
+                title: "参加者の宛先を Cc:に追加した",
+                description: "",
                 iconId: "icon2",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: false
             }
         ]
     },
@@ -973,16 +997,18 @@ export const ctextsC = {
         fontId: "font1",
         choices: [
             {
-                title: "USBメモリにデータをいれ、家に持ち帰ってやる",
-                description: "",
-                iconId: "icon1",
-                nextScene: "scene5"
-            },
-            {
                 title: "上司に話して残業する",
                 description: "",
+                iconId: "icon1",
+                nextScene: "scene5",
+                isCorrect: true
+            },
+            {
+                title: "USBメモリにデータをいれ、家に持ち帰ってやる",
+                description: "",
                 iconId: "icon2",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: false
             }
         ]
     },
@@ -1064,16 +1090,18 @@ export const wtextsA = {
         fontId: "font1",
         choices: [
             {
-                title: "クリックして解除する",
-                description: "要らないし、クリックしてメールの配信を解除しなきゃ",
-                iconId: "icon1",
-                nextScene: "scene6"
-            },
-            {
                 title: "クリックせずに消す",
                 description: "見覚えがないメールだし、開かず消してしまおう",
+                iconId: "icon1",
+                nextScene: "scene6",
+                isCorrect: true
+            },
+            {
+                title: "クリックして解除する",
+                description: "要らないし、クリックしてメールの配信を解除しなきゃ",
                 iconId: "icon2",
-                nextScene: "scene7"
+                nextScene: "scene7",
+                isCorrect: false
             }
         ]
     },
@@ -1163,16 +1191,18 @@ export const wtextsB = {
         fontId: "font1",
         choices: [
             {
-                title: "名札だけ塗りつぶして投稿しよう",
-                description: "",
-                iconId: "icon1",
-                nextScene: "scene6"
-            },
-            {
                 title: "投稿を控えた",
                 description: "",
+                iconId: "icon1",
+                nextScene: "scene6",
+                isCorrect: true
+            },
+            {
+                title: "名札だけ塗りつぶして投稿しよう",
+                description: "",
                 iconId: "icon2",
-                nextScene: "scene7"
+                nextScene: "scene7",
+                isCorrect: false
             }
         ]
     },
@@ -1237,16 +1267,18 @@ export const wtextsC = {
         fontId: "font1",
         choices: [
             {
-                title: "スマートフォンで撮影し、フィルター加工してから投稿した",
-                description: "",
-                iconId: "icon1",
-                nextScene: "sceneEnd"
-            },
-            {
                 title: "フィルムカメラで撮影し、PCで編集してから投稿した",
                 description: "",
+                iconId: "icon1",
+                nextScene: "sceneEnd",
+                isCorrect: true
+            },
+            {
+                title: "スマートフォンで撮影し、フィルター加工してから投稿した",
+                description: "",
                 iconId: "icon2",
-                nextScene: "sceneEnd"
+                nextScene: "sceneEnd",
+                isCorrect: false
             }
         ]
     },
@@ -1298,13 +1330,15 @@ export const stextsA = {
                 title: "レコード会社に問い合わせてみよう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene5"
+                nextScene: "scene5",
+                isCorrect: true
             },
             {
                 title: "どうせバレないから使っちゃえ！",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: false
             }
         ]
     },
@@ -1381,13 +1415,15 @@ export const stextsB = {
                 title: "警察に証拠として提出しよう！",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene7"
+                nextScene: "scene7",
+                isCorrect: true
             },
             {
                 title: "SNSに投稿し、拡散を依頼しよう",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: false
             }
         ]
     },
@@ -1461,16 +1497,18 @@ export const stextsC = {
         fontId: "font1",
         choices: [
             {
-                title: "「お前のほうが雑魚だからばーかばーか！」",
-                description: "",
-                iconId: "icon1",
-                nextScene: "scene4"
-            },
-            {
                 title: "「人には人の感じ方があるからね。コメントありがとう」",
                 description: "",
+                iconId: "icon1",
+                nextScene: "scene4",
+                isCorrect: true
+            },
+            {
+                title: "「お前のほうが雑魚だからばーかばーか！」",
+                description: "",
                 iconId: "icon2",
-                nextScene: "scene5"
+                nextScene: "scene5",
+                isCorrect: false
             }
         ]
     },
@@ -1555,13 +1593,15 @@ export const otextsA = {
                 title: "一度孫に携帯で電話してみようかのう",
                 description: "",
                 iconId: "icon1",
-                nextScene: "scene6"
+                nextScene: "scene6",
+                isCorrect: true
             },
             {
                 title: "孫のピンチじゃ！銀行に行かねば！",
                 description: "",
                 iconId: "icon2",
-                nextScene: "scene7"
+                nextScene: "scene7",
+                isCorrect: false
             }
         ]
     },
