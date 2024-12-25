@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結果画面</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+    </style>
 </head>
-
 <body>
-    <div>情報リテラシー人生ゲーム</div>
-    <a href="./jobSelect/jobSelect.html">スタート</a>
-</body>
+    <h1>結果</h1>
+    <p id="score"></p>
+    <button onclick="restartGame()">もう一度プレイする</button>
+    <script>
+        // ローカルストレージからスコアを取得して表示
+        const correct = localStorage.getItem('finalScore') || 0;
+        const total = localStorage.getItem('totalQuestions') || 0;
+        document.getElementById('score').textContent = `正解数: ${correct} / 回答数: ${total}`;
 
+        function restartGame() {
+            window.location.href = 'index.html'; // ゲームの最初のページに戻る
+        }
+    </script>
+</body>
 </html>

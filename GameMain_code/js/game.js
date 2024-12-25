@@ -22,8 +22,11 @@ const gameState = {
   isPaused: false,
   // バックログを保持
   history: [],
-  // スコア管理
-  score: 0,
+  // 正解数
+  correctCount: 0,
+  // 回答数
+  answeredCount: 0,
+  // 
   pausedScene: null
 };
 
@@ -269,6 +272,17 @@ const sceneManager = {
       // 選択肢の内容を設定
       this.setChoiceContent(elements.choiceElements[index], choice);
       elements.choiceElements[index].onclick = () => {
+        // 回答数を増加
+        gameState.answeredCount++;
+
+        // 正解かどうかを判定
+        if (choice.isCorrect) {
+          gameState.correctCount++;
+          console.log("正解！現在の正解数:", gameState.correctCount);
+        } else {
+          console.log("不正解！");
+        }
+
         // 選択肢を隠す
         this.hideChoices();
         // 次のシーンを表示する前にオートモードを再開
@@ -381,7 +395,8 @@ const gameController = {
     gameState.isPaused = false;
 
     // スコアを保存
-    localStorage.setItem('finalScore', gameState.score || 0);
+    localStorage.setItem('finalScore', gameState.correctCount);
+    localStorage.setItem('totalQuestions', gameState.answeredCount);
     // 結果画面へのリダイレクト
     window.location.href = 'result.html'; // <- 結果画面のHTMLを適宜差し替えてください
   }
